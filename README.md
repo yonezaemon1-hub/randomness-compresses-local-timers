@@ -43,7 +43,7 @@ The result isolates the deterministic local-timer cost behind the active-interva
 - `references.bib` — bibliography.
 - `PROOF_AUDIT.md` — theorem-chain and off-by-one audit.
 - `PRIOR_ART_AUDIT.md` — targeted novelty and claim-boundary audit.
-- `CITATION.cff` — citation metadata; paper DOI can be backfilled after publication.
+- `CITATION.cff` — citation metadata.
 - `.zenodo.json` — source/software deposit metadata.
 - `paper.publish.json` — paper-deposit metadata checklist.
 - `LICENSE` — MIT license for source/package materials.
@@ -60,7 +60,7 @@ pdflatex paper.tex
 pdflatex paper.tex
 ```
 
-The authoritative publication artifact is the PDF released with v1.0.0.
+The authoritative publication artifact is the PDF deposited with the paper DOI below.
 
 ## Current status
 
@@ -74,5 +74,5 @@ GitHub: https://github.com/yonezaemon1-hub/randomness-compresses-local-timers
 
 ## DOI
 
-Paper DOI: **pending Zenodo publication**  
+Paper DOI: **10.5281/zenodo.22642730**  
 Software/source-package DOI: **10.5281/zenodo.22642295**
