@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this preprint, please cite it as below."
+title: "Randomness Compresses Local Timers: Exact State Complexity of Beacon-Triggered Broadcast in Anonymous Dynamic Networks"
+type: article
+authors:
+  - family-names: Yonezu
+    given-names: Ryutaro
+version: "1.0.0"
+date-released: 2026-09-07
+url: "https://github.com/yonezaemon1-hub/randomness-compresses-local-timers"
