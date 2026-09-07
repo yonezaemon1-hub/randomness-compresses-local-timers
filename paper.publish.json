@@ -1,0 +1,12 @@
+{
+  "resource_type": "publication-preprint",
+  "title": "Randomness Compresses Local Timers: Exact State Complexity of Beacon-Triggered Broadcast in Anonymous Dynamic Networks",
+  "creators": [{"name": "Yonezu, Ryutaro", "affiliation": "Independent Researcher"}],
+  "version": "v1.0.0",
+  "publication_date": "2026-09-07",
+  "license": "cc-by-4.0",
+  "keywords": ["anonymous dynamic networks", "distributed algorithms", "broadcast", "stabilizing termination", "state complexity", "memory lower bounds", "randomization", "active intervals", "local timers"],
+  "paper_doi": "PENDING",
+  "software_doi": "PENDING",
+  "github": "https://github.com/yonezaemon1-hub/randomness-compresses-local-timers"
+}
