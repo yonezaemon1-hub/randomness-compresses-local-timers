@@ -1,0 +1,11 @@
+{
+  "title": "Randomness Compresses Local Timers: Source and Audit Package",
+  "upload_type": "software",
+  "description": "Source, manuscript, proof audit, prior-art audit, and sanity-check materials accompanying the preprint Randomness Compresses Local Timers: Exact State Complexity of Beacon-Triggered Broadcast in Anonymous Dynamic Networks.",
+  "creators": [
+    {"name": "Yonezu, Ryutaro", "affiliation": "Independent Researcher"}
+  ],
+  "license": "mit",
+  "keywords": ["anonymous dynamic networks", "distributed algorithms", "broadcast", "state complexity", "local timers", "active intervals"],
+  "version": "v1.0.0"
+}
