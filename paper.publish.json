@@ -6,7 +6,7 @@
   "publication_date": "2026-09-07",
   "license": "cc-by-4.0",
   "keywords": ["anonymous dynamic networks", "distributed algorithms", "broadcast", "stabilizing termination", "state complexity", "memory lower bounds", "randomization", "active intervals", "local timers"],
-  "paper_doi": "PENDING",
+  "paper_doi": "10.5281/zenodo.22642730",
   "software_doi": "10.5281/zenodo.22642295",
   "github": "https://github.com/yonezaemon1-hub/randomness-compresses-local-timers"
 }
