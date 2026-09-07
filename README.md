@@ -2,40 +2,71 @@
 
 Preprint v1.0.0 by **Ryutaro Yonezu (Independent Researcher)**.
 
+Full title:
+
+**Randomness Compresses Local Timers: Exact State Complexity of Beacon-Triggered Broadcast in Anonymous Dynamic Networks**
+
 ## Main result
 
 For known `n >= 2`, within the deterministic beacon-triggered locally timed active-interval (BTAI) class defined in the paper,
 
-`S_det(n) = n + 1` persistent states,
+```text
+S_det_BTAI(n) = n + 1
+```
 
-so the exact binary persistent-memory requirement is
+persistent states are necessary and sufficient. Hence the exact binary persistent-memory requirement is
 
-`ceil(log2(n + 1))` bits.
+```text
+M_det_BTAI(n) = ceil(log2(n + 1)) bits.
+```
 
-The paper first proves a broader architecture-level fact: any deterministic beacon-triggered bounded, non-renewing active-interval protocol must support an active interval of at least `n - 1` rounds. The exact state lower bound then follows only for the local-timer subclass.
+Before the state-count argument, the paper proves a broader architecture-level fact: every correct deterministic beacon-triggered bounded, non-renewing active-interval protocol must support an active interval of at least
+
+```text
+L >= n - 1
+```
+
+rounds.
 
 ## Scope
 
-This result does **not** prove an Omega(log n) lower bound for all deterministic non-idle-start stabilizing broadcast algorithms. Collective/distributed timers, activity renewal, message-driven timing, and different communication architectures are outside the exact theorem.
+The exact theorem is deliberately restricted to the locally timed beacon-triggered active-interval subclass. It does **not** prove an `Omega(log n)` lower bound for unrestricted deterministic non-idle-start stabilizing broadcast. Collective/distributed timers, activity renewal while active, message-driven timing, and additional external timing signals are outside the exact theorem.
+
+## Relation to randomized broadcast
+
+The result isolates the deterministic local-timer cost behind the active-interval architecture. Turau's SAND 2026 randomized construction uses Morris-style approximate counting to realize the same broad beacon/active-interval idea with `O(log log n)` local memory with high probability when `n` is known.
 
 ## Files
 
-- `Yonezu_2026_Randomness_Compresses_Local_Timers.pdf` - authoritative v1.0.0 manuscript PDF
-- `paper.tex` - LaTeX source
-- `references.bib` - bibliography
-- `PROOF_AUDIT.md` - theorem and off-by-one audit
-- `PRIOR_ART_AUDIT.md` - targeted novelty audit through 2026-09-06
-- `sanity_check.py` - lower-bound schedule checks and exhaustive small-n upper-bound model check
-- `CITATION.cff` - citation metadata
-- `.zenodo.json` - source/software deposit metadata
-- `paper.publish.json` - paper-deposit metadata checklist
-- `MANIFEST_SHA256.txt` - integrity manifest
+- `Yonezu_2026_Randomness_Compresses_Local_Timers.pdf` — authoritative v1.0.0 manuscript PDF.
+- `paper.tex` — LaTeX manuscript source.
+- `references.bib` — bibliography.
+- `PROOF_AUDIT.md` — theorem-chain and off-by-one audit.
+- `PRIOR_ART_AUDIT.md` — targeted novelty and claim-boundary audit.
+- `CITATION.cff` — citation metadata; DOI can be backfilled after publication.
+- `.zenodo.json` — source/software deposit metadata.
+- `paper.publish.json` — paper-deposit metadata checklist.
+- `LICENSE` — MIT license for source/package materials.
+- `LICENSE_PAPER.txt` — CC BY 4.0 notice for the manuscript text/PDF.
+
+## Reproduction
+
+A standard LaTeX installation with BibTeX can compile the manuscript source:
+
+```bash
+pdflatex paper.tex
+bibtex paper
+pdflatex paper.tex
+pdflatex paper.tex
+```
+
+The authoritative publication artifact is the PDF released with v1.0.0.
 
 ## Current status
 
 **PREPRINT v1.0.0 / NOT PEER REVIEWED.**
 
-The theorem has an analytic proof, targeted prior-art checking, deterministic timing sanity checks for `n=2..128`, and exhaustive adversarial snapshot checking of the matching upper-bound protocol for `n=2..5`. The computational checks are supplementary and are not substitutes for the proof.
+The theorem has an analytic proof and a targeted prior-art audit. The exact characterization is claimed only for the explicitly defined BTAI subclass.
 
 ## Repository
 
